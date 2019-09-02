@@ -1,0 +1,15 @@
+function add0(m){return m<10?'0'+m:m }
+function timeFormat(isStartTime){
+    //timestamp是整数，否则要parseInt转换,不会出现少个0的情况
+    var time = new Date();
+    var year = time.getFullYear();
+    var month = time.getMonth()+1;
+    var date = time.getDate();
+    if (isStartTime) {
+        // return year+'-'+add0(month)+'-'+'01';
+        return '2015-01-01';
+    }
+    else {
+        return year+'-'+add0(month)+'-'+add0(date);
+    }
+}
